@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="ecommerce.css">
+  <title>Frontend Mentor | E-commerce product page</title>
+
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="page-info">
+        <div class="menu-c"><img class="menu" src="./images/icon-menu.svg" alt="" onclick="openMenu()"></div>
+        <div><img class="logo" src="./images/logo.svg" alt=""></div>
+        <div class="desktop-links">
+          <a href="">Collections</a>
+          <a href="">Men</a>
+          <a href="">Women</a>
+          <a href="">About</a>
+          <a href="">Contact</a>
+        </div>
+      </div>
+      <div class="user-info">
+        <div class="cart">
+          <div id="qty"></div>
+          <img id="bskt" onclick="toggleCart()" src="./images/icon-cart.svg" alt="">
+        </div>
+        <div><img id="photo" src="./images/image-avatar.png" alt=""></div>
+      </div>
+    </header>
+
+    <div class="light-box"></div>
+
+    <div class="major">
+      <div class="image-info">
+        <div class="image-display">
+          <div id="image-window">
+            <img class="product-image" src="./images/image-product-1.jpg" alt="">
+          </div>
+          <div class="navigation-btn">
+            <div id="back" onclick="previousPicture()">
+              <img src="./images/icon-previous.svg" alt="">
+            </div>
+            <div id="foward" onclick="nextPicture()">
+              <img src="./images/icon-next.svg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="thumbnails">
+          <img id="thumbnail-1" src="./images/image-product-1-thumbnail.jpg" alt="" onclick="image1()">
+          <img id="thumbnail-2" src="./images/image-product-2-thumbnail.jpg" alt="" onclick="image2()">
+          <img id="thumbnail-3" src="./images/image-product-3-thumbnail.jpg" alt="" onclick="image3()">
+          <img id="thumbnail-4" src="./images/image-product-4-thumbnail.jpg" alt="" onclick="image4()">
+        </div>
+      </div>
+      <main>
+        <small>Sneaker Company</small>
+        <h1>Fall Limited Edition Sneakers</h1>
+        <p class="product-description">These low-profile sneakers are your perfect casual wear companion. Featuring a 
+          durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+          <div class="price">
+            <div class="price-discount">
+              <h2 id="amount">$125.00</h2>
+              <span>50%</span>
+            </div>
+            <del>$250.00</del>
+          </div>
+          <div class="select">
+            <div class="quantity">
+              <div>
+                <img id="subtract" src="./images/icon-minus.svg" alt="">
+              </div>
+              <div id="count">0</div>
+              <div>
+                <img id="addition" src="./images/icon-plus.svg" alt="">
+              </div>
+            </div>
+              <button class="btn">
+                <div>
+                  <img src="./images/icon-cart.svg" alt="">
+                </div>
+                <p>Add to cart</p>
+              </button>
+          </div>
+      </main>
+    </div>
+
+
+        <!--            Cart Details Start            -->
+    <div class="cart-info">
+      <h3>Cart</h3>
+      <div class="cart-display">
+        <div id="empty">
+          <p>Your cart is empty.</p>
+        </div>
+        <div id="product">
+          <div class="product-info">
+            <div>
+              <img class="cart-img" src="./images/image-product-1-thumbnail.jpg" alt="">
+            </div>
+            <div class="cart-decp">
+              <p class="name-plate">Fall Limited Edition Sneakers</p>
+              <p class="name-plate"><span id="unit-price">$125.00</span> x <span id="multiplier"></span>
+                <span class="dollar">  $</span><span id="total-value"></span><span class="dollar">.00</span></p>
+            </div>
+            <div>
+              <img id="bin" src="./images/icon-delete.svg" alt="">
+            </div>
+          </div>
+          <button class="checkout">Checkout</button>
+        </div>
+      </div>
+    </div>
+            <!--            Cart Details End            -->
+  </div>
+
+      <!--            Float Image Display Start     -->
+
+      <div class="image-float">
+        <div class="close-window">
+          <img src="./images/icon-close.svg" alt="">
+        </div>
+        <div class="image-display">
+          <img class="product-float" src="./images/image-product-1.jpg" alt="">
+          <div class="navigation-btn-float">
+            <div id="back-float" onclick="previousPicture2()">
+              <img src="./images/icon-previous.svg" alt="">
+            </div>
+            <div id="foward-float" onclick="nextPicture2()">
+              <img src="./images/icon-next.svg" alt="">
+            </div>
+          </div>
+        </div>
+          <img id="pdt-2" src="./images/image-product-2.jpg" alt="">
+          <img id="pdt-3" src="./images/image-product-3.jpg" alt="">
+          <img id="pdt-4" src="./images/image-product-4.jpg" alt="">
+        <div class="thumbnails-float">
+          <img id="thumbnail-1b" src="./images/image-product-1-thumbnail.jpg" alt="" onclick="image1()">
+          <img id="thumbnail-2b" src="./images/image-product-2-thumbnail.jpg" alt="" onclick="image2()">
+          <img id="thumbnail-3b" src="./images/image-product-3-thumbnail.jpg" alt="" onclick="image3()">
+          <img id="thumbnail-4b" src="./images/image-product-4-thumbnail.jpg" alt="" onclick="image4()">
+        </div>
+      </div>
+      
+          <!--            Float Image Display End       -->
+
+            <!--            Mobile Menu Display Start   -->
+  <div class="mobile-menu">
+    <div>
+      <img id="menu-hide" src="./images/icon-close.svg" alt="" onclick="closeMenu()">
+    </div>
+    <div class="links">
+      <a href="">Collections</a>
+      <a href="">Men</a>
+      <a href="">Women</a>
+      <a href="">About</a>
+      <a href="">Contact</a>
+    </div>
+  </div>
+            <!--            Mobile Menu Display End   -->
+
+  <script src="ecommerce.js"></script>
+</body>
+</html>
